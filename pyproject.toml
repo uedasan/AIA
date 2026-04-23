@@ -10,3 +10,8 @@ dependencies = [
     "scikit-image",
     "tqdm",
 ]
+
+[project.optional-dependencies]
+notebook = [
+    "notebook",
+]
