@@ -1,0 +1,12 @@
+[project]
+name = "aia"
+version = "0.1.0"
+description = "A small notebook implementation of the advanced iterative algorithm for phase extraction."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "scikit-image",
+    "tqdm",
+]
