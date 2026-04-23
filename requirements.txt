@@ -51,7 +51,7 @@ terminado==0.8.2
 testpath==0.4.2
 tifffile==2019.7.26
 tornado==6.5.5
-tqdm==4.36.1
+tqdm==4.66.3
 traitlets==4.3.3
 wcwidth==0.1.7
 webencodings==0.5.1
