@@ -66,7 +66,7 @@ $$
 
 の係数を求める．位相シフト量を $`\delta_k=\mathrm{atan2}(-c_k,b_k)`$ として更新し，再び各画素の成分を推定する．この二つの処理を繰り返すことで，物体の成分と位相シフト量を求める．
 
-反復の終了判定には，先頭画像を基準とした相対位相シフトの変化を用いる．更新前後の角度差を $`[-\pi,\pi]`$ に折り返し，その二乗和が `eps=1e-4` より小さく，最小反復数の条件を満たした場合に終了する．最大反復数は30である．既存のNotebookから計算方法を引き継いでおり，既定値 `n_iter_min=20` に対する実装上の条件 `i > n_iter_min` により，早期終了は22回目からとなる．
+反復の終了判定には，先頭画像を基準とした相対位相シフトの変化を用いる．更新前後の角度差を $`[-\pi,\pi]`$ に折り返し，その二乗和が `eps=1e-4` より小さくなった場合に終了する．反復は最大30回とし，既定設定では22回目以降に終了条件を適用する．
 
 ## 4．数値例の設定
 
@@ -210,7 +210,7 @@ np.savez("components.npz", attenuation=atten, scattering=scatt, phase=phase)
 | [demo.py](demo.py) | 数値例，背景による規格化，図と誤差の保存 |
 | [docs/images/](docs/images/) | READMEに掲載する図と誤差の数値 |
 | [tests/test_aia.py](tests/test_aia.py) | 解析解との比較および乱数の再現性のテスト |
-| [docs/decisions/001-static-documentation.md](docs/decisions/001-static-documentation.md) | Notebookから移行した経緯 |
+| [docs/decisions/001-static-documentation.md](docs/decisions/001-static-documentation.md) | 文書構成と依存関係を見直した経緯 |
 
 計算のテストは，次のコマンドで実行する．
 
