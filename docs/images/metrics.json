@@ -1,0 +1,20 @@
+{
+  "parameters": {
+    "seed": 12345,
+    "steps": 5,
+    "kx": 10,
+    "step_error": 1.0
+  },
+  "rmse": {
+    "uniform": {
+      "attenuation": 0.07348001323209358,
+      "scattering": 1.6322914167725826,
+      "phase": 1.1758373028353755
+    },
+    "aia": {
+      "attenuation": 0.004765047488893544,
+      "scattering": 0.010403318847837309,
+      "phase": 0.24955801891726911
+    }
+  }
+}
