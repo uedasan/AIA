@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Generated local demo runs (README figures are tracked in docs/images)
+/results/
+/docs/images/*.npz
